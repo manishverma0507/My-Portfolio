@@ -242,14 +242,17 @@ document.querySelectorAll('.certificate-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         const action = btn.textContent.toLowerCase();
-        const certificateName = btn.closest('.certificate-card').querySelector('h3').textContent;
-        
-        if (action === 'view') {
-            // Simulate opening certificate in modal
-            alert(`Opening ${certificateName} certificate...`);
-        } else if (action === 'download') {
-            // Simulate download
-            alert(`Downloading ${certificateName} certificate...`);
+        const certificateCard = btn.closest('.certificate-card');
+        if (certificateCard) {
+            const certificateName = certificateCard.querySelector('h3').textContent;
+            
+            if (action === 'view') {
+                // Simulate opening certificate in modal
+                alert(`Opening ${certificateName} certificate...`);
+            } else if (action === 'download') {
+                // Simulate download
+                alert(`Downloading ${certificateName} certificate...`);
+            }
         }
     });
 });
