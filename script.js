@@ -206,6 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add scroll indicator
 const createScrollIndicator = () => {
+    // Check if scroll indicator already exists
+    if (document.querySelector('.scroll-indicator')) return;
+    
     const indicator = document.createElement('div');
     indicator.className = 'scroll-indicator';
     indicator.innerHTML = '<div class="scroll-progress"></div>';
