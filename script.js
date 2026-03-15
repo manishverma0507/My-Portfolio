@@ -1,17 +1,12 @@
-
-// Initialize AOS (Animate On Scroll)
 AOS.init({
     duration: 1000,
     once: true,
     offset: 100
 });
-
-// Theme Toggle Functionality
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const themeIcon = themeToggle.querySelector('i');
 
-// Check for saved theme preference or default to 'light'
 const currentTheme = localStorage.getItem('theme') || 'light';
 body.setAttribute('data-theme', currentTheme);
 updateThemeIcon(currentTheme);
@@ -33,7 +28,6 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
